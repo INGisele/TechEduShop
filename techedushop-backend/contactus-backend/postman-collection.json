@@ -1,0 +1,331 @@
+{
+  "info": {
+    "name": "TechEduShop Contact API",
+    "description": "Complete API collection for testing the TechEduShop contact management backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Public Endpoints",
+      "item": [
+        {
+          "name": "Create Contact Submission",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Smith\",\n  \"school\": \"St. Mary's International School\",\n  \"email\": \"john.smith@school.com\",\n  \"phone\": \"+250 788 123 456\",\n  \"message\": \"We have 450 students across grades 1-6. We're interested in introducing technology education and would like to schedule a visit to discuss your programs.\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts"]
+            }
+          }
+        },
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/health",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin Endpoints",
+      "item": [
+        {
+          "name": "Get All Contacts",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts?page=1&limit=10",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Contacts - Filter by Status",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts?status=new&limit=20",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "new"
+                },
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Contacts - Search",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts?search=school",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts"],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "school"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Contacts - Unread Only",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts?isRead=false",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts"],
+              "query": [
+                {
+                  "key": "isRead",
+                  "value": "false"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Single Contact",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "REPLACE_WITH_CONTACT_ID"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Contact",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"contacted\",\n  \"priority\": \"high\",\n  \"notes\": \"Follow up scheduled for next week. Very interested in STEAM programs.\",\n  \"isRead\": true\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "REPLACE_WITH_CONTACT_ID"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Mark Contact as Read",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts/:id/read",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts", ":id", "read"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "REPLACE_WITH_CONTACT_ID"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Archive Contact",
+          "request": {
+            "method": "PATCH",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts/:id/archive",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts", ":id", "archive"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "REPLACE_WITH_CONTACT_ID"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Contact Statistics",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts/stats",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts", "stats"]
+            }
+          }
+        },
+        {
+          "name": "Delete Contact",
+          "request": {
+            "method": "DELETE",
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts/:id",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "REPLACE_WITH_CONTACT_ID"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Validation Tests",
+      "item": [
+        {
+          "name": "Invalid Email Format",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test User\",\n  \"school\": \"Test School\",\n  \"email\": \"invalid-email\",\n  \"message\": \"This should fail validation\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts"]
+            }
+          }
+        },
+        {
+          "name": "Missing Required Fields",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test User\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts"]
+            }
+          }
+        },
+        {
+          "name": "Message Too Short",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Test User\",\n  \"school\": \"Test School\",\n  \"email\": \"test@school.com\",\n  \"message\": \"Short\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/contacts",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5000",
+              "path": ["api", "v1", "contacts"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

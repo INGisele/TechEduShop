@@ -406,7 +406,7 @@
         .hero-image-main {
             width: 100%;
             height: 450px;
-            background: url('images/hero.png') no-repeat center center / cover;
+            background: url('images/hero.JPG') no-repeat center center / cover;
             border-radius: 30px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -519,7 +519,7 @@
         .about-image {
             position: relative;
             height: 500px;
-            background: url('images/about.png') no-repeat center center / cover;
+            background: url('images/about.JPG') no-repeat center center / cover;
             border-radius: 30px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -738,15 +738,17 @@
         }
 
         .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 4rem;
-            max-width: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .contact-info h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
         }
 
@@ -761,16 +763,22 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            align-items: center;
+            width: 100%;
         }
 
         .contact-item {
             display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.5rem;
             background: rgba(255, 255, 255, 0.1);
-            padding: 1.2rem;
+            padding: 1.5rem 2rem;
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
         }
 
         .contact-item-icon {
@@ -930,8 +938,7 @@
                 order: -1;
             }
 
-            .about-content,
-            .contact-wrapper {
+            .about-content {
                 grid-template-columns: 1fr;
             }
 
@@ -1204,8 +1211,8 @@
                                 <h4>Creative Showcase</h4>
                                 <div class="thumbnail-grid">
                                     <img src="images/gallery-creative.png" alt="Creative 1" class="thumb">
-                                    <img src="images/hero.png" alt="Creative 2" class="thumb">
-                                    <img src="images/about.png" alt="Creative 3" class="thumb">
+                                    <img src="images/hero.JPG" alt="Creative 2" class="thumb">
+                                    <img src="images/about.JPG" alt="Creative 3" class="thumb">
                                 </div>
                             </div>
                         </div>
@@ -1547,35 +1554,7 @@
                     </div>
                 </div>
 
-                <div class="contact-form">
-                    <h3>Request a School Visit</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Contact Person Name *</label>
-                            <input type="text" id="name" name="name" placeholder="John Smith" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="school">School Name *</label>
-                            <input type="text" id="school" name="school" placeholder="Your School Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" placeholder="contact@school.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+250 788 000 000">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Tell Us About Your School *</label>
-                            <textarea id="message" name="message"
-                                placeholder="Number of students, grade levels, current technology education status, or any questions..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="form-submit">Book a School Visit <i
-                                class="fa-solid fa-rocket"></i></button>
-                    </form>
-                </div>
+
             </div>
         </div>
     </section>
