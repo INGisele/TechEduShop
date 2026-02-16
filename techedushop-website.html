@@ -406,7 +406,7 @@
         .hero-image-main {
             width: 100%;
             height: 450px;
-            background: url('images/hero.png') no-repeat center center / cover;
+            background: url('https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006152/hero_dcemwe.jpg') no-repeat center center / cover;
             border-radius: 30px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -519,7 +519,7 @@
         .about-image {
             position: relative;
             height: 500px;
-            background: url('images/about.png') no-repeat center center / cover;
+            background: url('https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006138/about_pdcq8e.jpg') no-repeat center center / cover;
             border-radius: 30px;
             overflow: hidden;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -628,19 +628,19 @@
         }
 
         .gallery-item.coding {
-            background-image: url('images/gallery-coding.png');
+            background-image: url('https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006138/about_pdcq8e.jpg');
         }
 
         .gallery-item.robotics {
-            background-image: url('images/gallery-robotics.jpg');
+            background-image: url('https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006149/gallery-robotics_wkf9c9.jpg');
         }
 
         .gallery-item.typing {
-            background-image: url('images/typing3.jpeg');
+            background-image: url('https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006167/typing3_fp7fts.jpg');
         }
 
         .gallery-item.creative {
-            background-image: url('images/gallery-creative.png');
+            background-image: url('https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006147/gallery-creative_iyt6ba.png');
         }
 
         .gallery-item:hover {
@@ -738,15 +738,17 @@
         }
 
         .contact-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 4rem;
-            max-width: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .contact-info h3 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
         }
 
@@ -761,16 +763,22 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            align-items: center;
+            width: 100%;
         }
 
         .contact-item {
             display: flex;
-            align-items: flex-start;
-            gap: 1rem;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1.5rem;
             background: rgba(255, 255, 255, 0.1);
-            padding: 1.2rem;
+            padding: 1.5rem 2rem;
             border-radius: 15px;
             backdrop-filter: blur(10px);
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
         }
 
         .contact-item-icon {
@@ -930,8 +938,7 @@
                 order: -1;
             }
 
-            .about-content,
-            .contact-wrapper {
+            .about-content {
                 grid-template-columns: 1fr;
             }
 
@@ -1142,22 +1149,7 @@
             <div class="gallery-section fade-in">
                 <h3>See Learning in Action</h3>
                 <div class="gallery-grid">
-                    <!-- <div class="gallery-item coding">
-                        <div class="gallery-overlay">
-                            <div class="gallery-caption">Students Learning Coding <i
-                                    class="fa-solid fa-chevron-down module-icon"></i></div>
-                        </div>
-                        <div class="gallery-dropdown">
-                            <div class="dropdown-content">
-                                <h4>More Coding Moments</h4>
-                                <div class="thumbnail-grid">
-                                    <img src="images/gallery-coding.png" alt="Coding 1" class="thumb">
-                                    <img src="images/gallery-robotics.png" alt="Coding 2" class="thumb">
-                                    <img src="images/gallery-typing.png" alt="Coding 3" class="thumb">
-                                </div>
-                            </div>
-                        </div>
-                    </div>-->
+
                     <div class="gallery-item robotics">
                         <div class="gallery-overlay">
                             <div class="gallery-caption">LEGO Robotics Workshop <i
@@ -1167,13 +1159,20 @@
                             <div class="dropdown-content">
                                 <h4>More Robotics Fun</h4>
                                 <div class="thumbnail-grid">
-                                    <img src="images/LEGO 4.jpg" alt="Robotics 1" class="thumb">
-                                    <img src="images/LEGO 6.jpg" alt="Robotics 2" class="thumb">
-                                    <img src="images/LEGO 5.jpg" alt="Robotics 3" class="thumb">
-                                    <img src="images/LEGO 3.jpg" alt="Robotics 3" class="thumb">
-                                    <img src="images/LEGO 7.jpg" alt="Robotics 3" class="thumb">
-                                    <img src="images/LEGO 2.jpg" alt="Robotics 3" class="thumb">
-                                    <img src="images/LEGO 8.jpg" alt="Robotics 3" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006168/LEGO_7_n0lsnt.jpg"
+                                        alt="Robotics 1" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006167/LEGO_6_jtjfd9.jpg"
+                                        alt="Robotics 2" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006167/LEGO_5_d3xi2t.jpg"
+                                        alt="Robotics 3" class="thumb">
+                                    <img src="ihttps://res.cloudinary.com/dktf8qrqr/image/upload/v1771006166/LEGO_3_vv07of.jpg"
+                                        alt="Robotics 3" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006149/gallery-robotics_wkf9c9.jpg"
+                                        alt="Robotics 3" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006153/LEGO_2_j0qttj.jpg"
+                                        alt="Robotics 3" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006157/LEGO_8_wuagan.jpg"
+                                        alt="Robotics 3" class="thumb">
                                 </div>
                             </div>
                         </div>
@@ -1187,9 +1186,12 @@
                             <div class="dropdown-content">
                                 <h4>Typing Progress</h4>
                                 <div class="thumbnail-grid">
-                                    <img src="images/gallery-typing.jpg" alt="Typing 1" class="thumb">
-                                    <img src="images/typing2.jpg" alt="Typing 2" class="thumb">
-                                    <img src="images/typing4.jpeg" alt="Typing 3" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006143/gallery-typing_v8agyi.jpg"
+                                        alt="Typing 1" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006166/typing2_lkpsne.jpg"
+                                        alt="Typing 2" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006167/typing4_njzlct.jpg"
+                                        alt="Typing 3" class="thumb">
                                 </div>
                             </div>
                         </div>
@@ -1203,9 +1205,12 @@
                             <div class="dropdown-content">
                                 <h4>Creative Showcase</h4>
                                 <div class="thumbnail-grid">
-                                    <img src="images/gallery-creative.png" alt="Creative 1" class="thumb">
-                                    <img src="images/hero.png" alt="Creative 2" class="thumb">
-                                    <img src="images/about.png" alt="Creative 3" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006147/gallery-creative_iyt6ba.png"
+                                        alt="Creative 1" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006152/hero_dcemwe.jpg"
+                                        alt="Creative 2" class="thumb">
+                                    <img src="https://res.cloudinary.com/dktf8qrqr/image/upload/v1771006138/about_pdcq8e.jpg"
+                                        alt="Creative 3" class="thumb">
                                 </div>
                             </div>
                         </div>
@@ -1547,35 +1552,7 @@
                     </div>
                 </div>
 
-                <div class="contact-form">
-                    <h3>Request a School Visit</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Contact Person Name *</label>
-                            <input type="text" id="name" name="name" placeholder="John Smith" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="school">School Name *</label>
-                            <input type="text" id="school" name="school" placeholder="Your School Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" placeholder="contact@school.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+250 788 000 000">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Tell Us About Your School *</label>
-                            <textarea id="message" name="message"
-                                placeholder="Number of students, grade levels, current technology education status, or any questions..."
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="form-submit">Book a School Visit <i
-                                class="fa-solid fa-rocket"></i></button>
-                    </form>
-                </div>
+
             </div>
         </div>
     </section>
